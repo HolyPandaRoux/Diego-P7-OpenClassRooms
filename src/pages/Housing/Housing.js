@@ -1,25 +1,18 @@
-// This component displays detailed information about a selected piece of housing by searching for and rendering its corresponding object from a JSON file.
 import { useParams } from "react-router-dom";
 import housing from "../../data/housing.json";
 import "../../style/stylePages/Housing.css";
 import Slider from "../../components/Gallery";
 import Rating from "../../components/Rating.js";
 import Tags from "../../components/Tags";
-import Error from "../Error";
+import Error from "../Error/Error";
 
 
 function Housing() {
-  // Extract the id parameter from the URL
   const { id } = useParams();
-  // Search through the housing array to find an object with an id that matches the extracted ID
   const housingDetails = housing.find((object) => object.id === id)
-  // If no matching object is found, render the Error component
   if (!housingDetails) return <Error/>;
-  // Destructure several properties from the housingDetails object, such as title, location, tags, host, rating, description, and equipments
   const { title, location, tags, host, rating, description, equipments } = housingDetails;
-  // Define a range array with values 1-5
   const range = [1, 2, 3, 4, 5];
-  // Return JSX that displays the fetched housing details, including a slider component, an introduction section with the title, location, tags, host rating, and picture, and a section with housing details - description and equipments.
   return (
     <main>
       <Slider />
