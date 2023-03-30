@@ -1,14 +1,25 @@
+// This component displays detailed information about a selected piece of housing by searching for and rendering its corresponding object from a JSON file.
 import { useParams } from "react-router-dom";
 import housing from "../../data/housing.json";
 import "../../style/stylePages/Housing.css";
 import Slider from "../../components/Gallery";
+import Rating from "../../components/Rating.js";
+import Tags from "../../components/Tags";
+import Error from "../Error";
+
 
 function Housing() {
+  // Extract the id parameter from the URL
   const { id } = useParams();
-  const housingDetails = housing.find((object) => object.id === id);
-  const { title, location, tags, host, rating, description, equipments } =
-  housingDetails;
+  // Search through the housing array to find an object with an id that matches the extracted ID
+  const housingDetails = housing.find((object) => object.id === id)
+  // If no matching object is found, render the Error component
+  if (!housingDetails) return <Error/>;
+  // Destructure several properties from the housingDetails object, such as title, location, tags, host, rating, description, and equipments
+  const { title, location, tags, host, rating, description, equipments } = housingDetails;
+  // Define a range array with values 1-5
   const range = [1, 2, 3, 4, 5];
+  // Return JSX that displays the fetched housing details, including a slider component, an introduction section with the title, location, tags, host rating, and picture, and a section with housing details - description and equipments.
   return (
     <main>
       <Slider />
@@ -16,48 +27,10 @@ function Housing() {
         <div>
           <h1 id="intro-title">{title}</h1>
           <h2 id="intro-location">{location}</h2>
-          <div id="tags">
-            {tags.map((tag) => {
-              return (
-                <span className="tag" key={`${tag}`}>
-                  {tag}
-                </span>
-              );
-            })}
-          </div>
+          <Tags tags={tags} />
         </div>
-
         <div id="host">
-          <div id="host-stars">
-            {range.map((rangeElem) =>
-              rating >= rangeElem ? (
-                <svg
-                  key={rangeElem.toString()}
-                  className="star"
-                  viewBox="0 0 30 30"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    className="star-red"
-                    d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  key={rangeElem.toString()}
-                  className="star"
-                  viewBox="0 0 30 30"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    className="star-grey"
-                    d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
-                  />
-                </svg>
-              )
-            )}
-          </div>
-
+          <Rating rating={rating} range={range} />
           <div id="host-info">
             <p id="host-info-name">{host.name}</p>
             <img id="host-info-picture" src={host.picture} alt="{host.name}" />
@@ -87,5 +60,6 @@ function Housing() {
     </main>
   );
 }
+
 
 export default Housing;

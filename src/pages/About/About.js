@@ -1,7 +1,5 @@
-// Import des éléments de style
 import "../../style/stylePages/About.css";
 
-// Import des assets
 import BannerAboutXL from "../../assets/bannerAbout/bannerAboutXL.png";
 import BannerAboutS from "../../assets//bannerAbout/bannerAboutS.png";
 
@@ -14,7 +12,6 @@ function About() {
         <div id="banner-bg"></div>
       </div>
       <div id="about-accordion">
-        {/* Utilisation de l'élément HTML "details" qui permet de conserver et dévoiler/cacher des informations */}
         <details className="about-container">
           <summary className="about-title">
             Fiabilité <i className="fa-solid fa-chevron-down"></i>
