@@ -18,7 +18,7 @@ How to start it ?
 just open a terminal originating from the folder and tape npm start , the script will then do is job compile and launch the application and open a browser window directly on the app index/first page.
 
 the beautiful map (takes time to do this stuff...) of the app 
-
+ 
 App
 │
 ├── Header
