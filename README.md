@@ -1,6 +1,7 @@
 Howdy !
-```
 
+
+```
 As an app what do i do ?
 ```
 This app is a property rental application that allows users to search for properties by location, price range, and number of guests. It utilizes React and React Router for the front-end and a mock API for the back-end.
@@ -14,8 +15,9 @@ you'll find a map of the organization of the app in terms of folder and stuff , 
 How to install it ?
 ```
 just npm install selecting the folder , it will as it say install all the dependancies needed to make the app work , don't forget to install the react cli.
-```
 
+
+```
 How to start it ?
 ```
 just open a terminal originating from the folder and tape npm start , the script will then do is job compile and launch the application and open a browser window directly on the app index/first page.
