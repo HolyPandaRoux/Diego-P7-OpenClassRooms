@@ -18,6 +18,7 @@
   margin-top: 2%;
   margin-bottom: 3%;
 }
+
 #tags {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -179,6 +180,10 @@
   }
 
   .housing-info-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 142.6%;
     padding-top: 6%;
     padding-bottom: 5%;
   }

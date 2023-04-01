@@ -1,24 +1,24 @@
 @import "../../style/Accordion.css";
 
 #banner {
-    position : relative; 
+    position: relative;
     margin-bottom: 22px;
     width: 100%;
-    height: 223px; 
+    height: 223px;
 }
 
 #bannerS {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
-#bannerXL{
+#bannerXL {
     display: none;
 }
 
-#banner-bg{
+#banner-bg {
     background-color: #000000;
     opacity: 0.3;
     width: 100%;
@@ -27,10 +27,9 @@
     transform: translate(-0%, -102%);
 }
 
-@media screen and (min-width: 768px) 
-{
+@media screen and (min-width: 768px) {
 
-    #bannerS{
+    #bannerS {
         display: none;
     }
 
@@ -39,24 +38,23 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 25px; 
+        border-radius: 25px;
     }
 
-    #banner-bg{
+    #banner-bg {
         border-radius: 25px;
         transform: translate(-0%, -100%);
     }
 }
 
 /* Version desktop à partir de 1200px  */
-@media screen and (min-width: 1280px)
-{
+@media screen and (min-width: 1280px) {
 
     #banner {
         margin-bottom: 2%;
     }
 
-    #about-accordion{
+    #about-accordion {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -72,6 +70,10 @@
     }
 
     .about-text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
         font-size: 24px;
+        line-height: 142.6%;
     }
 }
