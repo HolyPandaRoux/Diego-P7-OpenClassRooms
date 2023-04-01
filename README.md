@@ -29,13 +29,13 @@ What are the words above do in short version ?
 
 Index : The main component of the app, responsible for rendering the Header and Pages components, we call it the router since he grabbs everything from the differents folders and then display it
 
-Header: The component responsible for displaying the header of the app
-
 Pages: The folder containing the various pages of the app, including Home
 
 Components: The folder containing various reusable components, including Error, Footer
 
 Data: The folder containing the json file with the data used to fill up the app 
+
+Style : the "code" of the pages are here using css
 
 Assets: The folder containing the assets for the app (images etc...)
 
