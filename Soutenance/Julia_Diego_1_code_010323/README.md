@@ -1,9 +1,14 @@
 Howdy !
 
 
-prerequises
-npm package manager
-react cli
+```
+As an app what do i do ?
+```
+This app is a property rental application that allows users to search for properties by location, price range, and number of guests. It utilizes React and React Router for the front-end and a mock API for the back-end.
+
+The principal functions used in the app include state management, rendering of components, handling of user events, and navigation through React Router. The app is structured in a modular and reusable component-based architecture, with each component having its own file.
+
+you'll find a map of the organization of the app in terms of folder and stuff , which i find really cool to understand it. and a precision of the different tools used to make it work,
 
 
 ```
