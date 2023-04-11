@@ -5,7 +5,7 @@ import Slider from "../../components/Gallery";
 import Rating from "../../components/Rating.js";
 import Tags from "../../components/Tags";
 import Error from "../Error/Error";
-
+import Collapse from "../../components/Collapse";
 
 function Housing() {
   const { id } = useParams();
@@ -32,27 +32,19 @@ function Housing() {
       </div>
 
       <div id="housing-info">
-        <details className="housing-info-details">
-          <summary className="housing-info-title">
-            Description <i className="fa-solid fa-chevron-down"></i>
-          </summary>
+        <Collapse title="Description">
           <p className="housing-info-text">{description}</p>
-        </details>
-
-        <details className="housing-info-details">
-          <summary className="housing-info-title">
-            Equipements <i className="fa-solid fa-chevron-down"></i>
-          </summary>
+        </Collapse>
+        <Collapse title="Equipements">
           <ul className="housing-info-text">
             {equipments.map((equipment) => {
               return <li key={`${equipment}`}> {equipment}</li>;
             })}
           </ul>
-        </details>
+        </Collapse>
       </div>
     </main>
   );
 }
-
 
 export default Housing;
