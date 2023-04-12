@@ -12,7 +12,7 @@ function Slider({ pictures }) {
     };
 
     return (
-        <section id="gallery">
+        <section id="gallery"> 
             {pictures.length > 1 && (
                 <i className="fa-solid fa-chevron-left" onClick={prevSlide}></i>
             )}
