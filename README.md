@@ -11,9 +11,9 @@
 3. Naviguez dans le dossier de l'application 
 
 4. Installez les dépendances en tapant la commande suivante :
-npm install
+```npm install```
 ou
-yarn install
+```yarn install```
 
 ## Utilisation
 
